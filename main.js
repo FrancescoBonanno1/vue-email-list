@@ -4,7 +4,7 @@ createApp({
     data() {
 
         return {
-           
+           emailbox :[""]
         
     }
     
@@ -12,5 +12,13 @@ createApp({
 
 methods :{
    
+},
+mounted (){
+
+    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(risposta) {
+       for (let i = 0; i < 10; i++) {
+        console.log(risposta.data);
+       }
+    })
 }
 }).mount(`#app`);
