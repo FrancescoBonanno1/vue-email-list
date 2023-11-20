@@ -2,21 +2,21 @@ const {createApp} = Vue;
 createApp({
 
     data() {
+        
         return {
-            arrayemail :[]
+            arrayemail : []
     };
     
 },
 
 methods :{
-   
 },
 mounted (){
   
     for (let i = 0; i < 10; i++) {
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(risposta) {
-           this.arrayemail = (risposta.data);
-           console.log(arrayemail);
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((risposta) =>{
+        this.arrayemail.push(risposta.data.response);
+        console.log(this.arrayemail);
             })}
    
 }
