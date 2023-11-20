@@ -3,7 +3,7 @@ createApp({
 
     data() {
         return {
-            arrayemail : [""]
+            arrayemail : []
     }
     
 },
@@ -13,11 +13,15 @@ methods :{
 },
 mounted (){
   
-    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(risposta) {
-       for (let i = 0; i < 10; i++) {
-       this.arrayemail.push(risposta.data);
-       console.log(arrayemail);
-       }
-    })
+    for (let i = 0; i < 10; i++) {
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(risposta) {
+           console.log(risposta.data);
+           this.arrayemail.push(risposta.data);
+           console.log(arrayemail);
+            })}
+   
 }
 }).mount(`#app`);
+
+
+    
