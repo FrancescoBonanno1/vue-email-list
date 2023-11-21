@@ -4,7 +4,7 @@ createApp({
     data() {
         
         return {
-            arrayemail : [],
+            arrayemail : []
             
     };
     
@@ -21,7 +21,7 @@ methods :{
 
 },
 mounted (){
-  generaemail()
+  
    
 }
 }).mount(`#app`);
